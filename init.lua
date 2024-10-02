@@ -84,6 +84,11 @@ I hope you enjoy your Neovim journey,
 P.S. You can delete this when you're done too. It's your config now! :)
 --]]
 
+-- Neovide Settings
+if vim.g.neovide then
+  vim.g.neovide_transparency = 0.8
+end
+
 -- Set <space> as the leader key
 -- See `:help mapleader`
 --  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
@@ -795,23 +800,33 @@ require('lazy').setup({
     end,
   },
   {
-    'neanias/everforest-nvim',
+    'rose-pine/neovim',
     version = false,
     lazy = false,
     priority = 1000, -- make sure to load this before all the other start plugins
     -- Optional; default configuration will be used if setup isn't called.
     config = function()
-      require('everforest').setup {
-        -- Your config here
-        background = 'medium',
-        transparent_background_level = 2,
+      require('rose-pine').setup {
+        variant = 'auto', -- auto, main, moon, or dawn
+        dark_variant = 'main', -- main, moon, or dawn
+        dim_inactive_windows = false,
+        extend_background_behind_borders = true,
+
+        enable = {
+          terminal = true,
+          legacy_highlights = true, -- Improve compatibility for previous versions of Neovim
+          migrations = true, -- Handle deprecated options automatically
+        },
+
+        styles = {
+          bold = true,
+          italic = true,
+          transparency = true,
+        },
       }
     end,
     init = function()
-      -- Load the colorscheme here.
-      -- Like many other themes, this one has different styles, and you could load
-      -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-      vim.cmd.colorscheme 'everforest'
+      vim.cmd.colorscheme 'rose-pine'
     end,
   },
 
