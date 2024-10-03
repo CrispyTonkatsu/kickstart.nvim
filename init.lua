@@ -199,6 +199,7 @@ vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
 
 -- Custom mappings
 vim.keymap.set('n', '<leader>h', '<Cmd>Ouroboros<CR>', { desc = 'Switch to [H]eader' })
+vim.keymap.set('n', '<leader>o', '<Cmd>OverseerRun<CR>', { desc = '[O]verseerRun' })
 
 -- Keybinds to make split navigation easier.
 --  Use CTRL+<hjkl> to switch between windows
@@ -925,6 +926,11 @@ require('lazy').setup({
   --  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
   --    For additional information, see `:help lazy.nvim-lazy.nvim-structuring-your-plugins`
   { import = 'custom.plugins' },
+
+  -- Running the custom plugins
+  --require('overseer').setup(),
+
+  -- UI setup
 }, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
