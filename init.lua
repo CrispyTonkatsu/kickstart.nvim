@@ -87,6 +87,7 @@ P.S. You can delete this when you're done too. It's your config now! :)
 -- Neovide Settings
 if vim.g.neovide then
   vim.g.neovide_transparency = 0.8
+  vim.g.neovide_cursor_vfx_mode = 'railgun'
 end
 
 -- Set <space> as the leader key
@@ -198,7 +199,7 @@ vim.keymap.set('n', '<up>', '<cmd>echo "Use k to move!!"<CR>')
 vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
 
 -- Custom mappings
-vim.keymap.set('n', '<leader>h', '<Cmd>Ouroboros<CR>', { desc = 'Switch to [H]eader' })
+vim.keymap.set('n', '<leader>h', '<Cmd>ClangdSwitchSourceHeader<CR>', { desc = 'Switch to [H]eader' })
 vim.keymap.set('n', '<leader>o', '<Cmd>OverseerRun<CR>', { desc = '[O]verseerRun' })
 
 -- Keybinds to make split navigation easier.
@@ -801,33 +802,21 @@ require('lazy').setup({
     end,
   },
   {
-    'rose-pine/neovim',
+    'EdenEast/nightfox.nvim',
     version = false,
     lazy = false,
     priority = 1000, -- make sure to load this before all the other start plugins
     -- Optional; default configuration will be used if setup isn't called.
     config = function()
-      require('rose-pine').setup {
-        variant = 'auto', -- auto, main, moon, or dawn
-        dark_variant = 'main', -- main, moon, or dawn
-        dim_inactive_windows = false,
-        extend_background_behind_borders = true,
-
-        enable = {
-          terminal = true,
-          legacy_highlights = true, -- Improve compatibility for previous versions of Neovim
-          migrations = true, -- Handle deprecated options automatically
-        },
-
-        styles = {
-          bold = true,
-          italic = true,
-          transparency = true,
+      require('nightfox').setup {
+        options = {
+          transparent = true,
+          terminal_colors = false,
         },
       }
     end,
     init = function()
-      vim.cmd.colorscheme 'rose-pine'
+      vim.cmd.colorscheme 'nightfox'
     end,
   },
 
@@ -926,9 +915,6 @@ require('lazy').setup({
   --  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
   --    For additional information, see `:help lazy.nvim-lazy.nvim-structuring-your-plugins`
   { import = 'custom.plugins' },
-
-  -- Running the custom plugins
-  --require('overseer').setup(),
 
   -- UI setup
 }, {
