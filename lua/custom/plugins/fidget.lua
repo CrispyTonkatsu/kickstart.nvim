@@ -1,11 +1,12 @@
-return {
-  'j-hui/fidget.nvim',
-  opts = {
-    -- options
-    notification = {
-      window = {
-        winblend = 0,
-      },
-    },
-  },
-}
+return {}
+-- return {
+--   'j-hui/fidget.nvim',
+--   opts = {
+--     -- options
+--     notification = {
+--       window = {
+--         winblend = 0,
+--       },
+--     },
+--   },
+-- }
