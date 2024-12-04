@@ -1,4 +1,4 @@
--- Neovide Settings
+-- Neovide Settingsini
 if vim.g.neovide then
   vim.g.neovide_transparency = 0.8
   vim.g.neovide_cursor_vfx_mode = 'railgun'
@@ -504,6 +504,16 @@ require('lazy').setup({
       local servers = {
         clangd = { mason = false },
 
+        rust_analyzer = {
+          settings = {
+            ['rust-analyzer'] = {
+              checkOnSave = {
+                command = 'clippy',
+              },
+            },
+          },
+        },
+
         -- gopls = {},
         -- pyright = {},
         -- rust_analyzer = {},
@@ -716,7 +726,7 @@ require('lazy').setup({
       }
     end,
   },
-  require 'custom.theme.flow',
+  require 'custom.theme.aquarium',
 
   -- Highlight todo, notes, etc in comments
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
