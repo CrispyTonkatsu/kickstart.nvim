@@ -1,4 +1,4 @@
--- Neovide Settingsini
+-- Neovide Settingsiniiniini
 if vim.g.neovide then
   vim.g.neovide_transparency = 0.8
   vim.g.neovide_cursor_vfx_mode = 'railgun'
@@ -726,7 +726,7 @@ require('lazy').setup({
       }
     end,
   },
-  require 'custom.theme.aquarium',
+  require 'custom.theme.monokai',
 
   -- Highlight todo, notes, etc in comments
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
