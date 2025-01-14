@@ -730,7 +730,7 @@ require('lazy').setup({
     end,
   },
   -- require 'custom.plugins.nixd',
-  require 'custom.theme.oh-lucy',
+  require 'custom.theme.everforest',
 
   -- Highlight todo, notes, etc in comments
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
@@ -768,7 +768,6 @@ require('lazy').setup({
       --   return '%2l:%-2v'
       -- end
 
-      -- ... and there is more!
       --  Check out: https://github.com/echasnovski/mini.nvim
     end,
   },
