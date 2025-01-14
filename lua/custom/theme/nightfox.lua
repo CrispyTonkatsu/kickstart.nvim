@@ -12,6 +12,6 @@ return {
     }
   end,
   init = function()
-    vim.cmd.colorscheme 'terafox'
+    vim.cmd.colorscheme 'nightfox'
   end,
 }

@@ -502,7 +502,10 @@ require('lazy').setup({
       --  - settings (table): Override the default settings passed when initializing the server.
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       local servers = {
-        clangd = { mason = false },
+        clangd = {
+          cmd = { 'clangd', '--cross-file-rename' },
+          mason = false,
+        },
 
         rust_analyzer = {
           settings = {
@@ -727,7 +730,7 @@ require('lazy').setup({
     end,
   },
   -- require 'custom.plugins.nixd',
-  require 'custom.theme.monokai',
+  require 'custom.theme.oh-lucy',
 
   -- Highlight todo, notes, etc in comments
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
