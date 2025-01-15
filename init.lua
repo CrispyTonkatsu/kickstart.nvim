@@ -731,7 +731,7 @@ require('lazy').setup({
   },
 
   -- Colorscheme is defined here
-  require 'custom.theme.load-themes',
+  require 'custom.theme.flow',
 
   -- Highlight todo, notes, etc in comments
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },

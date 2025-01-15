@@ -5,12 +5,18 @@ return {
   opts = {},
   config = function()
     require('flow').setup {
-      dark_theme = true, -- Set the theme with dark background.
-      high_contrast = false, -- Make the dark background darker or the light background lighter.
-      transparent = true, -- Set transparent background.
-      fluo_color = 'pink', -- Color used as fluo. Available values are pink, yellow, orange, or green.
-      mode = 'bright', -- Mode of the colors. Available values are: dark, bright, desaturate, or base.
-      aggressive_spell = false, -- Use colors for spell check.
+      theme = {
+        style = 'dark', --  "dark" | "light"
+        contrast = 'default', -- "default" | "high"
+        transparent = true, -- true | false
+      },
+      colors = {
+        mode = 'default', -- "default" | "dark" | "light"
+        fluo = 'pink', -- "pink" | "cyan" | "yellow" | "orange" | "green"
+      },
+      ui = {
+        borders = 'theme', -- "theme" | "inverse" | "fluo" | "none"
+      },
     }
     vim.cmd 'colorscheme flow'
   end,
