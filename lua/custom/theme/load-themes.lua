@@ -1,3 +1,3 @@
 return {
-  require 'custom.theme.citruszest',
+  require 'custom.theme.minimal',
 }
