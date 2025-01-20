@@ -15,7 +15,7 @@ return {
         fluo = 'pink', -- "pink" | "cyan" | "yellow" | "orange" | "green"
       },
       ui = {
-        borders = 'theme', -- "theme" | "inverse" | "fluo" | "none"
+        borders = 'inverse', -- "theme" | "inverse" | "fluo" | "none"
       },
     }
     vim.cmd 'colorscheme flow'
