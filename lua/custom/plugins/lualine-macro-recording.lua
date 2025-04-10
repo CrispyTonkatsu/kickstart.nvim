@@ -4,10 +4,4 @@ return {
     -- display macro recording
     { 'yavorski/lualine-macro-recording.nvim' },
   },
-  opts = {
-    sections = {
-      -- add to section of your choice
-      lualine_c = { 'macro_recording', '%S' },
-    },
-  },
 }

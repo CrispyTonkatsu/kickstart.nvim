@@ -9,7 +9,7 @@ return {
   },
   opts = {
     filesystem = {
-      window = { position = 'float' },
+      window = { position = 'right' },
     },
   },
 }

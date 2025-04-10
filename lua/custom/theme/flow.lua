@@ -12,7 +12,7 @@ return {
       },
       colors = {
         mode = 'default', -- "default" | "dark" | "light"
-        fluo = 'pink', -- "pink" | "cyan" | "yellow" | "orange" | "green"
+        fluo = 'cyan', -- "pink" | "cyan" | "yellow" | "orange" | "green"
       },
       ui = {
         borders = 'inverse', -- "theme" | "inverse" | "fluo" | "none"

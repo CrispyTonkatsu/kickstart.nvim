@@ -22,7 +22,7 @@ return {
       harpoon:list():next()
     end, { desc = 'Next Buffer in Harpoon [L]ist' })
 
-    for i = 1, 4, 1 do
+    for i = 1, 5, 1 do
       vim.keymap.set('n', string.format('<leader>%d', i), function()
         harpoon:list():select(i)
       end, { desc = string.format('Select Harpoon Buffer [%s]', i) })
