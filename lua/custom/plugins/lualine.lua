@@ -10,6 +10,7 @@ return {
       },
       sections = {
         lualine_c = {
+          'filename',
           {
             'harpoon2',
             icon = '',

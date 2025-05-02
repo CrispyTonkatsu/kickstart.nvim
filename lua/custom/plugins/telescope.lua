@@ -51,12 +51,13 @@ return { -- Fuzzy Finder (files, lsp, etc)
       defaults = {
         layout_config = {
           horizontal = {
-            preview_width = 0.5,
-            preview_cutoff = 0.9,
+            -- previewer = false,
+            -- preview_width = 0.5,
+            -- preview_cutoff = 0.9,
           },
         },
         mappings = {
-          i = { ['<c-enter>'] = 'to_fuzzy_refine' },
+          i = { ['<c-enter>'] = 'to_fuzzy_refine', ['<c-q>'] = require('telescope.actions.layout').toggle_preview },
         },
       },
       pickers = {
