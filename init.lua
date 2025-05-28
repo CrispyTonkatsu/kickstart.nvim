@@ -113,7 +113,7 @@ vim.keymap.set('n', '<up>', '<cmd>echo "Use k to move!!"<CR>')
 vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
 
 -- Custom mappings
-vim.keymap.set('n', '<leader>h', '<Cmd>ClangdSwitchSourceHeader<CR>', { desc = 'Switch to [H]eader' })
+vim.keymap.set('n', '<leader>h', '<Cmd>LspClangdSwitchSourceHeader<CR>', { desc = 'Switch to [H]eader' })
 vim.keymap.set('n', '<leader>o', '<Cmd>OverseerRun<CR>', { desc = '[O]verseerRun' })
 
 -- Keybinds to make split navigation easier.
@@ -239,8 +239,8 @@ require('lazy').setup({
     'neovim/nvim-lspconfig',
     dependencies = {
       -- Automatically install LSPs and related tools to stdpath for Neovim
-      { 'williamboman/mason.nvim', config = true }, -- NOTE: Must be loaded before dependants
-      'williamboman/mason-lspconfig.nvim',
+      { 'mason-org/mason.nvim', config = true }, -- NOTE: Must be loaded before dependants
+      'mason-org/mason-lspconfig.nvim',
       'WhoIsSethDaniel/mason-tool-installer.nvim',
 
       -- Useful status updates for LSP.
@@ -412,6 +412,11 @@ require('lazy').setup({
               },
             },
           },
+        },
+
+        ts_ls = {
+          cmd = { 'typescript-language-server' },
+          mason = false,
         },
 
         -- gopls = {},
@@ -628,7 +633,7 @@ require('lazy').setup({
   },
 
   -- Colorscheme is defined here
-  require 'custom.theme.vague',
+  require 'custom.theme.everviolet',
 
   -- Highlight todo, notes, etc in comments
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
