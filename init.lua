@@ -4,11 +4,16 @@ if vim.g.neovide then
   vim.g.neovide_cursor_vfx_mode = 'railgun'
 end
 
+vim.diagnostic.config { virtual_text = true }
+
 -- Set <space> as the leader key
 -- See `:help mapleader`
 --  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
+
+-- NOTE: This unmaps the shift enter weird behavior
+vim.keymap.set('n', '<S-CR>', '')
 
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = true
@@ -326,7 +331,7 @@ require('lazy').setup({
 
           -- Fuzzy find all the symbols in your current workspace.
           --  Similar to document symbols, except searches over your entire project.
-          map('<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
+          map('<leader>ws', require('telescope.builtin').lsp_workspace_symbols, '[W]orkspace [S]ymbols')
 
           -- Rename the variable under your cursor.
           --  Most Language Servers support renaming across files, etc.
@@ -633,7 +638,7 @@ require('lazy').setup({
   },
 
   -- Colorscheme is defined here
-  require 'custom.theme.everviolet',
+  require 'custom.theme.flow',
 
   -- Highlight todo, notes, etc in comments
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },

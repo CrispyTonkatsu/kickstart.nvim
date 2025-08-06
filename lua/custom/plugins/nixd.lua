@@ -13,9 +13,9 @@ return {
           nixos = {
             expr = '(builtins.getFlake ~/.nixos).nixosConfigurations.default.options',
           },
-          -- home_manager = {
-          --   expr = '(builtins.getFlake "~/.nixos").homeConfigurations.default.options',
-          -- },
+          home_manager = {
+            expr = '(builtins.getFlake "~/.nixos").homeConfigurations.default.options',
+          },
         },
       },
     },

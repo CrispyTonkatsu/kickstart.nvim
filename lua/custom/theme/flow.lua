@@ -7,15 +7,16 @@ return {
     require('flow').setup {
       theme = {
         style = 'dark', --  "dark" | "light"
-        contrast = 'default', -- "default" | "high"
         transparent = true, -- true | false
       },
       colors = {
-        mode = 'default', -- "default" | "dark" | "light"
-        fluo = 'cyan', -- "pink" | "cyan" | "yellow" | "orange" | "green"
+        fluo = 'pink', -- "pink" | "cyan" | "yellow" | "orange" | "green"
+        custom = {
+          saturation = '50',
+        },
       },
       ui = {
-        borders = 'inverse', -- "theme" | "inverse" | "fluo" | "none"
+        borders = 'none', -- "theme" | "inverse" | "fluo" | "none"
       },
     }
     vim.cmd 'colorscheme flow'
