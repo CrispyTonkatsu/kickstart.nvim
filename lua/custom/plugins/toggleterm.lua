@@ -9,7 +9,7 @@ return {
       border = 'double',
     },
 
-    shell = 'fish',
+    shell = 'nu',
     size = function(term)
       if term.direction == 'vertical' then
         return vim.o.columns * 0.4
