@@ -476,7 +476,7 @@ require('lazy').setup({
             -- by the server configuration above. Useful when disabling
             -- certain features of an LSP (for example, turning off formatting for tsserver)
             server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
-            require('lspconfig')[server_name].setup(server)
+            vim.lsp.config()[server_name].setup(server)
           end,
         },
       }
@@ -638,7 +638,7 @@ require('lazy').setup({
   },
 
   -- Colorscheme is defined here
-  require 'custom.theme.tokyo-night',
+  require 'custom.theme.flow',
 
   -- Highlight todo, notes, etc in comments
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },

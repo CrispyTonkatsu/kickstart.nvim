@@ -6,7 +6,7 @@ return {
   config = function()
     require('flow').setup {
       theme = {
-        style = 'light', --  "dark" | "light"
+        style = 'dark', --  "dark" | "light"
         transparent = true, -- true | false
       },
       colors = {
