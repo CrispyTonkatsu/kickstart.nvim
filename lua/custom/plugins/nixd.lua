@@ -1,6 +1,7 @@
 return {
   vim.lsp.config('nixd', {
     cmd = { 'nixd' },
+
     settings = {
       nixd = {
         nixpkgs = {
@@ -20,4 +21,6 @@ return {
       },
     },
   }),
+
+  vim.lsp.enable('nixd', true),
 }
