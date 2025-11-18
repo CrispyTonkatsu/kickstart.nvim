@@ -1,7 +1,8 @@
 -- Neovide Settings
 if vim.g.neovide then
-  vim.g.neovide_transparency = 0.8
+  vim.g.neovide_opacity = 0.8
   vim.g.neovide_cursor_vfx_mode = 'railgun'
+  vim.o.guifont = 'RobotoMono Nerd Font Mono:h16'
 end
 
 vim.diagnostic.config { virtual_text = true }
@@ -511,6 +512,7 @@ require('lazy').setup({
       end,
       formatters_by_ft = {
         lua = { 'stylua' },
+        json = { 'biome' },
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
         --

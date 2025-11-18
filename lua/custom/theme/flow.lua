@@ -7,7 +7,7 @@ return {
     require('flow').setup {
       theme = {
         style = 'dark', --  "dark" | "light"
-        transparent = true, -- true | false
+        transparent = not (vim.fn.has 'win32'), -- true | false
       },
       colors = {
         fluo = 'pink', -- "pink" | "cyan" | "yellow" | "orange" | "green"
@@ -16,7 +16,7 @@ return {
         },
       },
       ui = {
-        borders = 'none', -- "theme" | "inverse" | "fluo" | "none"
+        borders = 'inverse', -- "theme" | "inverse" | "fluo" | "none"
       },
     }
     vim.cmd 'colorscheme flow'
