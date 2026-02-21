@@ -8,15 +8,14 @@ return {
           expr = 'import <nixpkgs> { }',
         },
         formatting = {
-          command = { 'nixfmt' }, -- or nixfmt or nixpkgs-fmt
+          command = { 'nixpkgs-fmt' }, -- or nixfmt or nixpkgs-fmt
         },
         options = {
           nixos = {
-            expr = '(builtins.getFlake (builtins.toStirng(~/.nixos))).nixosConfigurations."default".options',
+            expr = '(builtins.getFlake ~/.nixos).nixosConfigurations.default.options',
           },
-
           home_manager = {
-            expr = '(builtins.getFlake (builtins.toString ~/.nixos)).nixosConfigurations."default".options.home-manager.users.type.getSubOptions[]',
+            expr = '(builtins.getFlake "~/.nixos").homeConfigurations.default.options',
           },
         },
       },
