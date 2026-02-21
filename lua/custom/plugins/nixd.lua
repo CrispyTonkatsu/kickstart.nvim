@@ -5,14 +5,20 @@ return {
     settings = {
       nixd = {
         nixpkgs = {
-          expr = 'import <nixpkgs> { }',
+          expr = 'import <nixpkgs> {}',
         },
+
         formatting = {
           command = { 'nixfmt' }, -- or nixfmt or nixpkgs-fmt
         },
+
         options = {
+          darwin = {
+            expr = '(builtins.getFlake (builtins.toString(~/.nixos))).darwinConfigurations.Erinas-MacBook-Pro.options',
+          },
+
           nixos = {
-            expr = '(builtins.getFlake (builtins.toStirng(~/.nixos))).nixosConfigurations."default".options',
+            expr = '(builtins.getFlake (builtins.toString(~/.nixos))).nixosConfigurations."default".options',
           },
 
           home_manager = {

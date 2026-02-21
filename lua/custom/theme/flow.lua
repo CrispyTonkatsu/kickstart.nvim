@@ -16,7 +16,7 @@ return {
         },
       },
       ui = {
-        borders = 'inverse', -- "theme" | "inverse" | "fluo" | "none"
+        borders = 'none', -- "theme" | "inverse" | "fluo" | "none"
       },
     }
     vim.cmd 'colorscheme flow'
