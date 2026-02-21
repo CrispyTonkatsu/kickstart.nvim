@@ -695,7 +695,7 @@ require('lazy').setup({
   },
   { -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
-    branch = 'main', -- <--- ADD THIS LINE
+    branch = 'master', -- <--- ADD THIS LINE
     lazy = false,
     build = ':TSUpdate',
     main = 'nvim-treesitter', -- Sets main module to use for opts
