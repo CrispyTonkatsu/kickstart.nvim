@@ -5,6 +5,10 @@ if vim.g.neovide then
   vim.o.guifont = 'RobotoMono Nerd Font Mono:h16'
 end
 
+vim.g.syntax = true
+
+vim.cmd [[syntax enable]]
+
 vim.diagnostic.config { virtual_text = true }
 
 -- Set <space> as the leader key
@@ -406,9 +410,17 @@ require('lazy').setup({
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       local servers = {
         clangd = {
-          cmd = { 'clangd', '--cross-file-rename' },
-          mason = false,
+          settings = {
+            cmd = { 'clangd', '--cross-file-rename' },
+            mason = false,
+          },
         },
+
+        --- NOTE: This is triggerring an error somehow
+        -- bitbake_language_server = {
+        --   cmd = { 'bitbake-language-server', '--stdio' },
+        --   mason = false,
+        -- },
 
         rust_analyzer = {
           settings = {
