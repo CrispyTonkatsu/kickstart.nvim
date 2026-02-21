@@ -1,9 +1,9 @@
 return {
   'lervag/vimtex',
-  lazy = true, -- we don't want to lazy load VimTeX
+  lazy = false, -- we don't want to lazy load VimTeX
   ft = 'tex',
   init = function()
-    if has 'macunix' then
+    if vim.loop.os_uname().sysname == 'Darwin' then
       vim.g.vimtex_view_method = 'skim'
     else
       vim.g.vimtex_view_method = 'zathura'

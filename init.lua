@@ -432,11 +432,11 @@ require('lazy').setup({
           },
         },
 
-        ts_ls = {
-          cmd = { 'typescript-language-server' },
-          mason = false,
-        },
-
+        -- ts_ls = {
+        --   cmd = { 'typescript-language-server' },
+        --   mason = false,
+        -- },
+        --
         -- gopls = {},
         -- pyright = {},
         -- rust_analyzer = {},
@@ -695,7 +695,8 @@ require('lazy').setup({
   },
   { -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
-    branch = 'master', -- <--- ADD THIS LINE
+    branch = 'main', -- <--- ADD THIS LINE
+    lazy = false,
     build = ':TSUpdate',
     main = 'nvim-treesitter', -- Sets main module to use for opts
     -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
