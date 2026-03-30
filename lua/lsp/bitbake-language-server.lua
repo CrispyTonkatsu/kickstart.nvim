@@ -4,10 +4,8 @@ return {
 
     settings = {
       cmd = { 'language-server-bitbake', '--stdio' },
-      filetypes = { 'bb' },
+      filetype = { 'bb' },
       root_dir = { 'conf/loca.conf', '.git' },
-
-      mason = false,
     },
   }),
 }

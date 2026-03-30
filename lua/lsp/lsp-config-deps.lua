@@ -2,6 +2,7 @@ return {
   -- Automatically install LSPs and related tools to stdpath for Neovim
   { 'mason-org/mason.nvim', config = true }, -- NOTE: Must be loaded before dependants
   'mason-org/mason-lspconfig.nvim',
+  -- TODO: set up 'jay-babu/mason-nvim-dap.nvim',
   'WhoIsSethDaniel/mason-tool-installer.nvim',
 
   -- Useful status updates for LSP.
