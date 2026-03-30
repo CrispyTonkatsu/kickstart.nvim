@@ -20,6 +20,7 @@ require('lazy').setup({
   { import = 'core' },
   { import = 'lsp' },
 
+  -- Not importing all themes because I don't need them
   require 'theme.sonokai',
 
   { import = 'plugins' },
