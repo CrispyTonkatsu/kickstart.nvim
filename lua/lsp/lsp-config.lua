@@ -14,6 +14,7 @@ return {
       'pyright',
       'json-lsp',
       'prettier',
+      'language-server-bitbake',
     }
 
     require('mason').setup()

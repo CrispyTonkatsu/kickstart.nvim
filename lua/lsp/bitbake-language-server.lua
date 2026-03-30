@@ -1,11 +1,10 @@
 return {
   vim.lsp.config('language-server-bitbake', {
-    cmd = { 'language-server-bitbake' },
+    cmd = { 'language-server-bitbake', '--stdio' },
 
     settings = {
-      cmd = { 'language-server-bitbake', '--stdio' },
-      filetype = { 'bb' },
-      root_dir = { 'conf/loca.conf', '.git' },
+      filetype = { 'bb', 'bbappend', 'conf/*.conf' },
+      root_dir = { 'conf/local.conf', '.git' },
     },
   }),
 }
