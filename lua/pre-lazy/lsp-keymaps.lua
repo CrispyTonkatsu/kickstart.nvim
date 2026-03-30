@@ -6,7 +6,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
       vim.keymap.set('n', keys, func, { buffer = event.buf, desc = 'LSP: ' .. desc })
     end
 
-    -- WARN: This is not Goto Definition, this is Goto Declaration.
+    -- NOTE: This is not Goto Definition, this is Goto Declaration.
     --  For example, in C this would take you to the header.
     map('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
     map('gd', require('telescope.builtin').lsp_definitions, '[G]oto [D]efinition')
@@ -50,5 +50,3 @@ vim.api.nvim_create_autocmd('LspAttach', {
     end
   end,
 })
-
-return {}

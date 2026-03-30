@@ -28,6 +28,4 @@ return {
       },
     },
   }),
-
-  vim.lsp.enable('nixd', true),
 }

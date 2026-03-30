@@ -10,6 +10,4 @@ return {
       mason = false,
     },
   }),
-
-  vim.lsp.enable('language-server-bitbake', true),
 }
