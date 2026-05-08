@@ -7,18 +7,21 @@ return {
     local capabilities = vim.lsp.protocol.make_client_capabilities()
     capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
 
-    local required_servers = {
-      'clangd',
-      'rust_analyzer',
-      'lua_ls',
-      'pyright',
-      'json-lsp',
-      'prettier',
-      'language-server-bitbake',
-    }
-
-    require('mason').setup()
-    require('mason-tool-installer').setup { ensure_installed = required_servers }
-    require('mason-lspconfig').setup()
-  end,
+    -- TODO: Enable this conditionally for windows
+    --
+    -- local required_servers = {
+    --   'clangd',
+    --   'rust_analyzer',
+    --   'lua_ls',
+    --   'pyright',
+    --   'json-lsp',
+    --   'prettier',
+    --   'language-server-bitbake',
+    -- }
+    --
+    -- require('mason').setup()
+    -- require('mason-tool-installer').setup {
+    ensure_installed = required_servers
+  }
+  --require('mason-lspconfig').setup() end,
 }

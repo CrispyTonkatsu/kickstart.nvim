@@ -1,6 +1,7 @@
 return {
   vim.lsp.config('nixd', {
     cmd = { 'nixd' },
+    filetypes = { 'nix' },
 
     settings = {
       nixd = {
@@ -22,7 +23,8 @@ return {
           },
 
           home_manager = {
-            expr = '(builtins.getFlake (builtins.toString ~/.nixos)).nixosConfigurations."default".options.home-manager.users.type.getSubOptions[]',
+            expr =
+            '(builtins.getFlake (builtins.toString ~/.nixos)).nixosConfigurations."default".options.home-manager.users.type.getSubOptions[]',
           },
         },
       },
