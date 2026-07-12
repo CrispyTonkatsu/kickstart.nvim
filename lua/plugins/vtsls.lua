@@ -1,6 +1,9 @@
 return {
   vim.lsp.config('vtsls', {
-    -- TODO: Configure the filetypes that are allowed
+    filetypes = {
+      'javascript', "typescript",
+      'javascriptreact', "typescriptreact",
+    },
     cmd = { "vtsls", "--stdio" },
   }),
 
