@@ -21,7 +21,7 @@ require('lazy').setup({
   { import = 'lsp' },
 
   -- Not importing all themes because I don't need them
-  require 'theme.sonokai',
+  require 'theme.everforest',
 
   { import = 'plugins' },
 }, {

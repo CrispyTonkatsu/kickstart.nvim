@@ -5,8 +5,7 @@ return {
   opts = function()
     require('evergarden').setup {
       theme = {
-        variant = 'summer', -- 'winter'|'fall'|'spring'|'summer'
-        accent = 'cherry',
+        variant = 'winter', -- 'winter'|'fall'|'spring'|'summer'
       },
 
       editor = {
