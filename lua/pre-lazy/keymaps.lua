@@ -32,3 +32,4 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 
 -- Custom mappings
 vim.keymap.set('n', '<leader>h', '<Cmd>LspClangdSwitchSourceHeader<CR>', { desc = 'Switch to [H]eader' })
+vim.keymap.set('n', '<leader>rtt', '<Cmd>RustTargetToggle<CR>', { desc = '[R]ust[T]arget[T]oggle' })
