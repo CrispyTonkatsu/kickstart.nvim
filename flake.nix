@@ -24,6 +24,24 @@
           packages = with pkgs; [
             lua-language-server
           ];
+
+          shellHook = ''
+            # Dynamically generate .luarc.json pointing to the exact current nix package stubs
+            cat << EOF > .luarc.json
+            {
+              "workspace": {
+                "library": [
+                  "${pkgs.neovim}/share/nvim/runtime/lua"
+                ]
+              },
+              "diagnostics": {
+                "globals": ["vim"]
+              }
+            }
+            EOF
+
+            echo "LSP configuration generated for this Hyprland version."
+          '';
         };
       }
     );
