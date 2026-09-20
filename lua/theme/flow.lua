@@ -7,10 +7,10 @@ return {
     require('flow').setup {
       theme = {
         style = 'dark', --  "dark" | "light"
-        transparent = not (vim.fn.has 'win32'), -- true | false
+        transparent = true,
       },
       colors = {
-        fluo = 'pink', -- "pink" | "cyan" | "yellow" | "orange" | "green"
+        fluo = 'cyan', -- "pink" | "cyan" | "yellow" | "orange" | "green"
         custom = {
           saturation = '50',
         },
