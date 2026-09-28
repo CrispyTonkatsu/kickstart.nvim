@@ -3,17 +3,14 @@ return {
   version = '*',
   opts = {
     open_mapping = [[<c-\>]],
-    direction = 'float',
+    direction = 'tab',
 
     float_opts = {
       border = 'double',
     },
 
     shell = 'nu',
-    size = function(term)
-      if term.direction == 'vertical' then
-        return vim.o.columns * 0.4
-      end
-    end,
   },
+
+  vim.keymap.set('t', '<C-Esc>', '<C-\\><C-n>', { remap = false })
 }
