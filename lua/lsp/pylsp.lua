@@ -1,3 +1,4 @@
 return {
-  vim.lsp.enable('pylsp', true),
+  vim.lsp.enable('basedpyright', true),
+  vim.lsp.enable('ruff', true),
 }
