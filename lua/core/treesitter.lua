@@ -3,7 +3,7 @@ return { -- Highlight, edit, and navigate code
   lazy = false,
   build = ':TSUpdate',
   opts = {
-    ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc' },
+    ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc', 'wgsl' },
     -- Autoinstall languages that are not installed
     auto_install = true,
     highlight = {
@@ -15,4 +15,17 @@ return { -- Highlight, edit, and navigate code
     },
     indent = { enable = true, disable = { 'ruby' } },
   },
+
+  -- Configuring WGSL treesitter
+  config = function()
+    vim.filetype.add({ extension = { wgsl = 'wgsl' } })
+    vim.treesitter.language.register('wgsl', 'wgsl')
+
+    vim.api.nvim_create_autocmd("FileType", {
+      pattern = "wgsl",
+      callback = function()
+        pcall(vim.treesitter.start)
+      end,
+    })
+  end
 }

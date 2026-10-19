@@ -22,6 +22,5 @@ return {
     -- require('mason').setup()
     -- require('mason-tool-installer').setup { ensure_installed = required_servers }
     -- require('mason-lspconfig').setup()
-
   end,
 }
