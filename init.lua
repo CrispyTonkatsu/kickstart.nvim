@@ -3,6 +3,7 @@ require 'pre-lazy.keymaps'
 require 'pre-lazy.lsp-keymaps'
 require 'pre-lazy.autocommands'
 require 'pre-lazy.neovide'
+require 'pre-lazy.vscode'
 
 -- [[ Install `lazy.nvim` plugin manager ]]
 --    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info

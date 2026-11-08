@@ -23,6 +23,7 @@
 
           packages = with pkgs; [
             lua-language-server
+            stylua
           ];
 
           shellHook = ''
@@ -40,7 +41,7 @@
             }
             EOF
 
-            echo "LSP configuration generated for this Hyprland version."
+            echo "LSP configuration generated for this nvim version."
           '';
         };
       }

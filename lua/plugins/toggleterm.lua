@@ -5,12 +5,8 @@ return {
     open_mapping = [[<c-\>]],
     direction = 'float',
 
-    float_opts = {
-      border = 'double',
-    },
-
     shell = 'nu',
   },
 
-  vim.keymap.set('t', '<C-Esc>', '<C-\\><C-n>', { remap = false })
+  vim.keymap.set('t', '<C-Esc>', '<C-\\><C-n>', { remap = false }),
 }
